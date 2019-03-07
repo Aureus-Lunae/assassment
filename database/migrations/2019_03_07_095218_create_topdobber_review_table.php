@@ -13,7 +13,7 @@ class CreateTopdobberReviewTable extends Migration
      */
     public function up()
     {
-        Schema::create('topdobber_review', function (Blueprint $table) {
+        Schema::create('review', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('rating');

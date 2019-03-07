@@ -15,7 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+});
+
+
 Auth::routes();
+
+Route::get('/reviews', 'reviewController@index');
+Route::post('/reviews', 'reviewController@store');
+Route::get('/reviews/create', 'reviewController@create');
 
 /* Quiz Routes */
 Route::get('/quiz', 'generalController@quizStep1');
@@ -26,4 +35,3 @@ Route::get('/quizStep3', 'generalController@quizStep3');
 Route::post('/quizStep3', 'generalController@postQuizStep3');
 Route::get('/quizResult', 'generalController@results')->middleware('auth');
 
-Route::get('/home', 'HomeController@index')->name('home');

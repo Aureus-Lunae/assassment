@@ -40,4 +40,8 @@ class User extends Authenticatable
   public function getFullNameAttribute() {
     return $this->first_name . ' ' . $this->last_name;
   }
+
+  public function reviews(){
+    return $this->hasMany(reviews::class, 'user_id');
+  }
 }
