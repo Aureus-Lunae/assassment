@@ -17,4 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+/* Quiz Routes */
+Route::get('/quiz', 'generalController@quizStep1');
+Route::post('/quiz', 'generalController@postQuizStep1');
+Route::get('/quizStep2', 'generalController@quizStep2');
+Route::post('/quizStep2', 'generalController@postQuizStep2');
+Route::get('/quizStep3', 'generalController@quizStep3');
+Route::post('/quizStep3', 'generalController@postQuizStep3');
+Route::get('/quizResult', 'generalController@results')->middleware('auth');
+
 Route::get('/home', 'HomeController@index')->name('home');

@@ -14,8 +14,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    De inline dobber waarmee je zelfs haaien kan vangen.
+                    <div class="col-md-6 offset-md-4">
+                        De inline dobber waarmee je zelfs haaien kan vangen!
+                    </div>
+                    <div class="col-md-6 offset-md-4">
+                        <a href='/quiz' type="button" class="btn btn-primary">Doe de quiz en win!</a>
+                        
+                    </div>
                 </div>
             </div>
         </div>
